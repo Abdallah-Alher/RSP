@@ -1,6 +1,4 @@
-/* ===============================
-   🌍 Règles globales
-================================== */
+/* Règles globales */
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +20,7 @@ body {
   gap: 3rem;
 }
 
-/* ===============================
-   🔝 SECTION SUPÉRIEURE (Top)
-================================== */
+/* SECTION SUPÉRIEURE (Top) */
 .top-section {
   display: flex;
   justify-content: center;
@@ -33,7 +29,7 @@ body {
   margin: 1rem;
 }
 
-/* Bloc gauche */
+/* Bloc gauche (left) */
 .left {
   max-width: 35%;
 }
@@ -102,9 +98,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* ===============================
-   💬 SECTION BASSE (Témoignages)
-================================== */
+/* SECTION BASSE (Témoignages) */
 .bottom-section {
   display: flex;
   flex-direction: column;
@@ -170,11 +164,9 @@ body {
   line-height: 1.5;
 }
 
-/* ===============================
-   📱 RESPONSIVE DESIGN
-================================== */
+/* RESPONSIVITE */
 
-/* === Tablettes et petits écrans (≤768px) === */
+/* La responsivité Tablettes et petits écrans (≤768px) */
 @media (max-width: 768px) {
   .top-section {
     flex-direction: column;
@@ -243,7 +235,7 @@ body {
   }
 }
 
-/* === Très petits écrans (≤375px) === */
+/* Pour les très petits écrans (≤375px)  */
 @media (max-width: 375px) {
   body {
     padding: 1.5rem 1rem;
