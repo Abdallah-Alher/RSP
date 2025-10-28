@@ -1,4 +1,6 @@
-/* Règles globales de la page */
+/* ===============================
+   🌍 Règles globales
+================================== */
 * {
   margin: 0;
   padding: 0;
@@ -20,15 +22,18 @@ body {
   gap: 3rem;
 }
 
-/* Top Section */
+/* ===============================
+   🔝 SECTION SUPÉRIEURE (Top)
+================================== */
 .top-section {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 1em;
   margin: 1rem;
 }
 
-/* Bloc gauche : 30% */
+/* Bloc gauche */
 .left {
   max-width: 35%;
 }
@@ -47,7 +52,7 @@ body {
   max-width: 35ch;
 }
 
-/* Bloc droit : 70% */
+/* Bloc droit */
 .right {
   flex: 0 0 65%;
   max-width: 65%;
@@ -57,7 +62,7 @@ body {
   margin: 1rem;
 }
 
-/* Style des blocs étoiles */
+/* Éléments étoiles */
 .stars {
   background-color: #f5f1f7;
   padding: 1rem 1.5rem;
@@ -69,18 +74,15 @@ body {
   transition: background-color 0.3s;
 }
 
-
-/* effet escalier inversé (déprogressif) */
+/* Effet escalier inversé (dégressif) */
 .stars:nth-child(1) {
   align-self: center;
   margin-left: 4rem;
 }
-
 .stars:nth-child(2) {
   align-self: center;
   margin-left: 2rem;
 }
-
 .stars:nth-child(3) {
   align-self: center;
   margin-left: 0;
@@ -100,7 +102,9 @@ body {
   font-size: 0.95rem;
 }
 
-/* Section Témoignages */
+/* ===============================
+   💬 SECTION BASSE (Témoignages)
+================================== */
 .bottom-section {
   display: flex;
   flex-direction: column;
@@ -131,7 +135,6 @@ body {
 .card:hover {
   background-color: #8f33ad;
 }
-  
 
 /* Profil utilisateur */
 .person {
@@ -149,7 +152,6 @@ body {
   border: 2px solid #d8b8f0;
 }
 
-
 /* Nom et statut */
 .name h3 {
   font-size: 1.1rem;
@@ -161,10 +163,105 @@ body {
   font-size: 0.95rem;
   color: #d8b8f0;
 }
- 
 
 /* Texte témoignage */
 .card p {
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+================================== */
+
+/* === Tablettes et petits écrans (≤768px) === */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Bloc gauche */
+  .left {
+    max-width: 100%;
+  }
+
+  .left h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .left p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* Bloc droit */
+  .right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .stars {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* occupe toute la largeur de l'écran */
+    border-radius: 0;
+    margin-left: 0 !important;
+    padding: 1rem;
+  }
+
+  .stars div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .stars p {
+    text-align: center;
+  }
+
+  /* Cartes du bas */
+  .bottom_1,
+  .bottom_2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+  }
+}
+
+/* === Très petits écrans (≤375px) === */
+@media (max-width: 375px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  .left h1 {
+    font-size: 1.7rem;
+  }
+
+  .stars {
+    padding: 0.8rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
 }
